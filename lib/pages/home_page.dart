@@ -4,12 +4,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text(
-        'Chat Home',
-        style: TextStyle(
-          fontSize: 35,
-        ),
-        ),
+      body: Image.asset('assets/images/profile1.png'),
     );
   }
 }
