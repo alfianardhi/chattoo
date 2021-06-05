@@ -24,7 +24,17 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.w400,
                 )),
             SizedBox(
-              height: 23,
+              height: 30,
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                border: UnderlineInputBorder(),
+                suffixIcon: Icon(Icons.search),
+                hintText: "Search",
+              ),
+            ),
+            SizedBox(
+              height: 24.5,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
