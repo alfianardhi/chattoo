@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
+  Dashboard({this.title, @required this.btnTitle});
+  final String title;
+  final String btnTitle;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: Text(
-          "Dashboard",
+          title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
@@ -22,7 +26,7 @@ class Dashboard extends StatelessWidget {
           Container(
             child: RaisedButton(
               child: Text(
-                "Ok",
+                (btnTitle == null) ? "Button" : btnTitle,
               ),
             ),
           ),

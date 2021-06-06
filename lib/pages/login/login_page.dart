@@ -27,8 +27,13 @@ class LoginPage extends StatelessWidget {
                 "Login",
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Dashboard()));
+                String title = "Dashboards";
+
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Dashboard(
+                          title: title,
+                          btnTitle: "Oks",
+                        )));
               },
             ),
           ),
