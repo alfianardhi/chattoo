@@ -1,7 +1,10 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
-  Dashboard({this.title, @required this.btnTitle});
+  Dashboard(
+      {@PathParam('title') this.title,
+      @PathParam('btnTitle') @required this.btnTitle});
   final String title;
   final String btnTitle;
 
@@ -24,7 +27,8 @@ class Dashboard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            child: RaisedButton(
+            child: TextButton(
+              onPressed: () {},
               child: Text(
                 (btnTitle == null) ? "Button" : btnTitle,
               ),
