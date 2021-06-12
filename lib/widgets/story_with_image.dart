@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class StoryWithImage extends StatelessWidget {
   const StoryWithImage({
-    Key key,
-    @required this.imagePath,
-    @required this.imageSize,
+    Key? key,
+    required this.imagePath,
+    required this.imageSize,
   }) : super(key: key);
 
   final String imagePath;

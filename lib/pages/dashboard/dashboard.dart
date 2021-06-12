@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
-  Dashboard({this.title, @required this.btnTitle});
+  Dashboard({required this.title, required this.btnTitle});
   final String title;
   final String btnTitle;
 
