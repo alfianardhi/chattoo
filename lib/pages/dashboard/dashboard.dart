@@ -1,10 +1,7 @@
-import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
-  Dashboard(
-      {@PathParam('title') this.title,
-      @PathParam('btnTitle') @required this.btnTitle});
+  Dashboard({this.title, @required this.btnTitle});
   final String title;
   final String btnTitle;
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:chattoo/pages/dashboard/dashboard.dart';
 
 class LoginPage extends StatelessWidget {
@@ -30,13 +29,11 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 String title = "Dashboards";
 
-                // Navigator.of(context).push(MaterialPageRoute(
-                //     builder: (context) => Dashboard(
-                //           title: title,
-                //           btnTitle: "Oks",
-                //         )));
-
-                context.pushRoute(Dashboard(title: title, btnTitle: "Button"));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => Dashboard(
+                          title: title,
+                          btnTitle: "Oks",
+                        )));
               },
             ),
           ),
