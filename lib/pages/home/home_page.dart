@@ -1,4 +1,4 @@
-import 'package:chattoo/widgets/story_with_image.dart';
+import 'package:chattoo/pages/home/widgets/story_with_image.dart';
 import 'package:flutter/material.dart';
 import 'package:chattoo/theme.dart';
 

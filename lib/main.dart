@@ -1,4 +1,4 @@
-import 'package:chattoo/pages/presentation/menu_list.dart';
+import 'package:chattoo/presentation/menu_list/menu_list.dart';
 import 'package:flutter/material.dart';
 // import 'pages/home/home_page.dart';
 // import 'pages/login/login_page.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       ),
       //home: HomePage(),
       //home: LoginPage(),
-      home: MenuList(),
+      home: MenuListPage(),
     );
   }
 }

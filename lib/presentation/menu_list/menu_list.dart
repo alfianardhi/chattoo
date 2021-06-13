@@ -1,10 +1,11 @@
+import 'package:chattoo/presentation/item_detail/item_detail.dart';
 import 'package:flutter/material.dart';
 
-class MenuList extends StatefulWidget {
-  const MenuList({Key? key}) : super(key: key);
+class MenuListPage extends StatefulWidget {
+  const MenuListPage({Key? key}) : super(key: key);
 
   @override
-  _MenuListState createState() => _MenuListState();
+  _MenuListPageState createState() => _MenuListPageState();
 }
 
 List<String> imgList = [
@@ -16,7 +17,7 @@ List<String> imgList = [
   "assets/images/foodImg5.jpg",
 ];
 
-class _MenuListState extends State<MenuList> {
+class _MenuListPageState extends State<MenuListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,17 +45,39 @@ class _MenuListState extends State<MenuList> {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
             ),
-            itemBuilder: (context, index) => Container(
-              width: 100,
-              height: 100,
-              // margin: EdgeInsets.only(bottom: 15),
-              child: Image.asset(
-                imgList[index],
-                fit: BoxFit.cover,
+            itemBuilder: (context, index) => InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) =>
+                        ItemDetailPage(foodimg: imgList[index])));
+              },
+              child: ListItemImg(
+                imgList: imgList[index],
               ),
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class ListItemImg extends StatelessWidget {
+  const ListItemImg({
+    Key? key,
+    required this.imgList,
+  }) : super(key: key);
+  final String imgList;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 100,
+      height: 100,
+      // margin: EdgeInsets.only(bottom: 15),
+      child: Image.asset(
+        imgList,
+        fit: BoxFit.cover,
       ),
     );
   }
