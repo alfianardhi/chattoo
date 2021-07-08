@@ -5,6 +5,8 @@ class Dashboard extends StatelessWidget {
   final String title;
   final String btnTitle;
 
+  int number1 = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,14 +22,27 @@ class Dashboard extends StatelessWidget {
           Icon(Icons.group),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          number1 += 1;
+        },
+      ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            child: TextButton(
+            child: ElevatedButton(
               onPressed: () {},
               child: Text(
-                (btnTitle == null) ? "Button" : btnTitle,
+                btnTitle,
+              ),
+            ),
+          ),
+          Center(
+            child: Text(
+              number1.toString(),
+              style: TextStyle(
+                fontSize: 25,
               ),
             ),
           ),

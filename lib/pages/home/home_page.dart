@@ -1,4 +1,5 @@
 import 'package:chattoo/pages/home/widgets/story_with_image.dart';
+import 'package:chattoo/pages/home/widgets/story_text.dart';
 import 'package:flutter/material.dart';
 import 'package:chattoo/theme.dart';
 
@@ -39,29 +40,89 @@ class HomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
-                StoryWithImage(
-                  imagePath: 'assets/images/add_story.png',
-                  imageSize: 38,
+                Column(
+                  children: [
+                    StoryWithImage(
+                      imagePath: 'assets/images/add_story.png',
+                      imageSize: 38,
+                    ),
+                    SizedBox(
+                      height: 9,
+                    ),
+                    StoryText(
+                      textStory: "Add New",
+                    ),
+                  ],
                 ),
-                StoryWithImage(
-                  imagePath: 'assets/images/story1.png',
-                  imageSize: 42,
+                Column(
+                  children: [
+                    StoryWithImage(
+                      imagePath: 'assets/images/story1.png',
+                      imageSize: 42,
+                    ),
+                    SizedBox(
+                      height: 9,
+                    ),
+                    StoryText(
+                      textStory: "Andrew",
+                    ),
+                  ],
                 ),
-                StoryWithImage(
-                  imagePath: 'assets/images/story2.png',
-                  imageSize: 42,
+                Column(
+                  children: [
+                    StoryWithImage(
+                      imagePath: 'assets/images/story2.png',
+                      imageSize: 42,
+                    ),
+                    SizedBox(
+                      height: 9,
+                    ),
+                    StoryText(
+                      textStory: "Micheal",
+                    ),
+                  ],
                 ),
-                StoryWithImage(
-                  imagePath: 'assets/images/story3.png',
-                  imageSize: 42,
+                Column(
+                  children: [
+                    StoryWithImage(
+                      imagePath: 'assets/images/story3.png',
+                      imageSize: 42,
+                    ),
+                    SizedBox(
+                      height: 9,
+                    ),
+                    StoryText(
+                      textStory: "Sara",
+                    ),
+                  ],
                 ),
-                StoryWithImage(
-                  imagePath: 'assets/images/story4.png',
-                  imageSize: 42,
+                Column(
+                  children: [
+                    StoryWithImage(
+                      imagePath: 'assets/images/story4.png',
+                      imageSize: 42,
+                    ),
+                    SizedBox(
+                      height: 9,
+                    ),
+                    StoryText(
+                      textStory: "John",
+                    ),
+                  ],
                 ),
-                StoryWithImage(
-                  imagePath: 'assets/images/story5.png',
-                  imageSize: 43,
+                Column(
+                  children: [
+                    StoryWithImage(
+                      imagePath: 'assets/images/story5.png',
+                      imageSize: 43,
+                    ),
+                    SizedBox(
+                      height: 9,
+                    ),
+                    StoryText(
+                      textStory: "Julia",
+                    ),
+                  ],
                 ),
               ],
             ),

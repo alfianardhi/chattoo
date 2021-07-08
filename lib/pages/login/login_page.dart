@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
-            child: TextButton(
+            child: ElevatedButton(
               // splashColor: Colors.blueAccent,
               child: Text(
                 "Login",
@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => Dashboard(
                           title: title,
-                          btnTitle: "Oks",
+                          btnTitle: "Counter",
                         )));
               },
             ),
