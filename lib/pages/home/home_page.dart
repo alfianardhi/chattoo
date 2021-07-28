@@ -126,6 +126,15 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 26,
+            ),
+            Text('Recent',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: blackColor,
+                  fontWeight: FontWeight.w400,
+                )),
           ],
         ),
       ),
