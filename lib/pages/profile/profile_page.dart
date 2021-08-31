@@ -36,14 +36,85 @@ class _ProfilePageState extends State<ProfilePage> {
               children: [
                 Container(
                   height: 160,
-                  color: Colors.blueAccent,
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 150,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage('assets/images/female_480.jpg'),
+                          ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Flexible(
+                        child: Text('second box'),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 Flexible(
-                    child: Container(
-                  child: Row(
-                    children: [],
+                  child: Container(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: OutlinedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Chat',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.black87,
+                              ),
+                            ),
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Follow'.toUpperCase(),
+                              style: TextStyle(
+                                fontSize: 16,
+                              ),
+                            ),
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                      // ignore: todo
+                      // TODO: part2
+                    ),
                   ),
-                )),
+                ),
               ],
             ),
           ),
